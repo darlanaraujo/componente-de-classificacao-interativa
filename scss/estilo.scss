@@ -1,7 +1,46 @@
+@import 'padroes';
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+}
+
+.page {
+    width: 100%;
+    height: 100vh;
+    background-color: $corFundo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.modal {
+    background-image: $corModal;
+    width: 370px;
+    height: 370px;
+    border-radius: 30px;
+    padding: 30px;
+}
+
+.footer {
+    position: absolute;
+    display: block;
+    width: 100%;
+    bottom: 10px;
+    text-align: center;
+    color: #fff;
+
+    .attribution {
+        font-size: 11px;
+        text-align: center;
+        line-height: 30px;
+    
+        & a {
+            color: hsla(0, 0%, 100%, 0.511);
+        }
+    }
 }
