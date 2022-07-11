@@ -1,15 +1,15 @@
 #Frontend Mentor - Componente de classificação interativo
 
-Bem-vindo ao hub do desafio "Componente de classificação interativo"!
+Apresentação
 
-Agora você tem acesso ao hub para este desafio. Você pode voltar aqui sempre que quiser clicando em “Meus Desafios” na navegação da sua página de perfil e selecionando este desafio.
+Seu desafio é construir esse componente de classificação interativo e fazê-lo parecer o mais próximo possível do design.
 
-Este hub é onde você pode:
+Você pode usar qualquer ferramenta que desejar para ajudá-lo a completar o desafio. Então, se você tem algo que gostaria de praticar, sinta-se à vontade para tentar.
 
-Baixe os arquivos iniciais.
-Baixe os arquivos de design Sketch e Figma.
-Veja soluções para este desafio e dê feedback a outras pessoas.
-Envie e edite sua solução.
-Lembre-se, se você ficar preso, sinta-se à vontade para fazer perguntas em nossa comunidade do Slack. Alguém na comunidade entrará em contato e apoiará você quando estiver disponível.
+Seus usuários devem ser capazes de:
 
-Esperamos que gostem do desafio!
+Selecione e envie uma classificação numérica
+Ver o estado do cartão "Obrigado" após enviar uma avaliação
+Visualize o layout ideal para o aplicativo, dependendo do tamanho da tela do dispositivo
+Veja os estados de foco para todos os elementos interativos na página
+Baixe o projeto e acesse o arquivo README.md. Isso fornecerá mais detalhes sobre o projeto e ajudará você a configurar.

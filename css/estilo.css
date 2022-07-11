@@ -1,9 +1,23 @@
+@keyframes move-up {
+  from {
+    transform: translate3d(0px, -50px, 0px);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0px, 0px, 0px);
+    opacity: 1;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
+  font-family: sans-serif;
+  color: #fff;
+  font-weight: 400;
 }
 
 .page {
@@ -17,11 +31,144 @@
 }
 
 .modal {
+  animation: move-up .5s forwards;
   background-image: linear-gradient(to bottom right, #222932 1%, #181d26);
-  width: 370px;
-  height: 370px;
+  width: 420px;
+  min-width: 325px;
+  height: 420px;
   border-radius: 30px;
-  padding: 30px;
+  padding: 40px;
+}
+
+@media (max-width: 450px) {
+  .modal {
+    margin: 10px;
+    padding: 20px;
+  }
+}
+
+.tela1 {
+  display: none;
+}
+
+.tela1 .circulo {
+  display: inline-flex;
+  width: 50px;
+  height: 50px;
+  background-color: #262e37;
+  padding: 10px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.tela1 .circulo .icone-star {
+  width: 20px;
+  height: 20px;
+}
+
+.tela1 .titulo {
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.tela1 .texto {
+  font-weight: 200;
+  color: #767c86;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.tela1 .wrapper-nota {
+  display: flex;
+  width: 100%;
+  height: 55px;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.tela1 .wrapper-nota .circulo {
+  border: none;
+  cursor: pointer;
+}
+
+.tela1 .wrapper-nota .circulo:hover {
+  background-color: #ff7430;
+}
+
+.tela1 .wrapper-nota .circulo.active {
+  background-color: #7c8796;
+}
+
+.tela1 .btn-enviar {
+  display: block;
+  text-align: center;
+  background-color: #ff7430;
+  padding: 15px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 200;
+  cursor: pointer;
+}
+
+.tela1 .btn-enviar:hover {
+  background-color: #fff;
+  color: #ff7430;
+}
+
+.tela1.active {
+  display: block;
+  animation: move-up 1.5s forwards;
+}
+
+.tela2 {
+  display: none;
+}
+
+.tela2 .img-destaque {
+  margin-bottom: 40px;
+}
+
+.tela2 .resultado {
+  width: 200px;
+  padding: 8px;
+  border-radius: 20px;
+  background-color: #262e37;
+  margin-bottom: 50px;
+  font-size: 14px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  color: #ff7430;
+}
+
+.tela2 .resultado > span {
+  font-size: 14px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  color: #ff7430;
+}
+
+.tela2 .titulo {
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.tela2 .texto {
+  font-weight: 200;
+  color: #767c86;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.tela2.active {
+  animation: move-up .5s forwards;
+  display: grid;
+  justify-items: center;
+  text-align: center;
 }
 
 .footer {

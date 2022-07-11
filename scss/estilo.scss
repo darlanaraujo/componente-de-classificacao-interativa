@@ -1,11 +1,20 @@
 @import 'padroes';
 
+@mixin mobile {
+    @media (max-width: 450px) {
+        @content;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    font-family: sans-serif;
+    color: #fff;
+    font-weight: 400;
 }
 
 .page {
@@ -19,11 +28,145 @@
 }
 
 .modal {
+    animation: move-up .5s forwards;
     background-image: $corModal;
-    width: 370px;
-    height: 370px;
+    width: 420px;
+    min-width: 325px;
+    height: 420px;
     border-radius: 30px;
-    padding: 30px;
+    padding: 40px;
+
+    @include mobile {
+        margin: 10px;
+        padding: 20px;
+    }
+}
+
+.tela1 {
+
+    display: none;
+
+    .circulo {
+        display: inline-flex;
+        width: 50px;
+        height: 50px;
+        background-color: $corCirculos;
+        padding: 10px;
+        border-radius: 50%;
+        margin-bottom: 30px;
+        justify-content: center;
+        align-items: center;
+
+        .icone-star {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .titulo {
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+    }
+
+    .texto {
+        font-weight: 200;
+        color: $corTexto;
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 30px;
+    }
+
+    .wrapper-nota {
+        display: flex;
+        width: 100%;
+        height: 55px;
+        justify-content: space-around;
+        margin-bottom: 30px;
+
+        .circulo {
+            border: none;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $corLaranja;
+            }
+
+            &.active {
+                background-color: $corCinza;
+            }
+        }
+
+    }
+
+    .btn-enviar {
+        display: block;
+        text-align: center;
+        background-color: $corLaranja;
+        padding: 15px;
+        border-radius: 30px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 200;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #fff;
+            color: $corLaranja;
+        }
+    }
+
+    &.active {
+        display: block;
+        animation: move-up 1.5s forwards;
+    }
+}
+
+.tela2 {
+    display: none;
+
+    .img-destaque {
+        margin-bottom: 40px;
+    }
+    
+    .resultado {
+        width: 200px;
+        padding: 8px;
+        border-radius: 20px;
+        background-color: $corCirculos;
+        margin-bottom: 50px;
+        font-size: 14px;
+        font-weight: 200;
+        letter-spacing: 1px;
+        color: $corLaranja;
+
+        > span {
+            font-size: 14px;
+            font-weight: 200;
+            letter-spacing: 1px;
+            color: $corLaranja;
+        }
+
+    }
+    
+    .titulo {
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+    }
+
+    .texto {
+        font-weight: 200;
+        color: $corTexto;
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 30px;
+    }
+
+    &.active {
+        animation: move-up .5s forwards;
+        display: grid;
+        justify-items: center;
+        text-align: center;
+    }
 }
 
 .footer {
@@ -38,7 +181,7 @@
         font-size: 11px;
         text-align: center;
         line-height: 30px;
-    
+
         & a {
             color: hsla(0, 0%, 100%, 0.511);
         }

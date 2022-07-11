@@ -4,3 +4,14 @@ $corLaranja: rgb(255, 116, 48);
 $corCirculos: rgb(38, 46, 55);
 $corCinza: rgb(124, 135, 150);
 $corTexto: rgb(118, 124, 134);
+
+@keyframes move-up {
+    from {
+        transform: translate3d(0px, -50px, 0px);
+        opacity: 0;
+    }
+    to {
+        transform: translate3d(0px, 0px, 0px);
+        opacity: 1;
+    }
+}
